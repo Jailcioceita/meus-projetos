@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.png">
+        <title>Videos e Musicas</title>
+        
+        <style>
+
+header {
+    position: fixed;
+    top: 0;
+    position: relative;
+    }
+    #logo {
+      position: absolute;
+      top: -20px;
+      left: -15px;
+      width: 150px;
+      cursor: pointer;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    #logo:hover {
+      transform: rotate(360deg);
+      transition: transform 0.5s ease-in-out;
+    }
+
+            body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh; /* Isso garante que o conteúdo mínimo da viewport seja 100% da altura da tela. */
+                background-color: #e6f7ff;
+                font-family: 'Comic Sans MS', cursive, sans-serif;
+            }
+		
+
+        header {
+            background: #1f3c58;
+            color: #ebebeb;
+            text-align: center;
+        }
+
+        nav {
+            background: #0077cc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+            body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh; /* Isso garante que o conteúdo mínimo da viewport seja 100% da altura da tela. */
+                background-color: #e6f7ff;
+                font-family: 'Comic Sans MS', cursive, sans-serif;
+            }
+    
+            .content {
+                flex: 1; /* Ocupa o espaço disponível para empurrar o footer para o final da página. */
+            }
+
+            nav a:hover {
+            color: #ff6f61; /* Muda a cor ao passar o mouse */
+        }
+    
+            .footer {
+                background: #ffffff;
+                color: #32A8E0;
+                padding: 10px 0;
+                text-align: center;
+                font-weight: 100;
+                font-family: 'Comic Sans MS', cursive, sans-serif;
+                font-size: 14px;
+            }
+
+        /* Estilos CSS para as grelhas */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+            margin-left: 20px; /* Adiciona margem nas grelhas */
+            margin-right: 20px; /* Adiciona margem nas grelhas */
+        }
+
+        .video-item {
+            border: 2px solid #3b73a8; /* Cor da borda */
+            border-radius: 25px; /* Arredondamento das bordas */
+            overflow: hidden; /* Garante que o conteúdo não ultrapasse as bordas */
+            background-color: #f2f2f2; /* Fundo das grelhas */
+            padding: 10px;
+        }
+
+        .video-item iframe {
+            width: 100%;
+            height: 200px; /* Altura dos vídeos */
+            border: none; /* Remove a borda padrão do iframe */
+        }
+
+        .video-explanation {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: #1f3c58;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img id="logo" src="assets/img/logo.png" alt="Kiduca Logo" onclick="alert('Clicou no logotipo!')">
+    </header>
+    
+    <!-- Barra de Navegação -->
+    <nav>
+        <a href="index.html" onclick="alert('Bem-vindo à página inicial!')">Home</a>
+        <a href="jogos.html" onclick="alert('Descubra jogos divertidos para crianças!')">Jogos</a>
+        <a href="#" onclick="alert('Assista a vídeos educativos para crianças!')">Vídeos/Músicas</a>
+        <a href="sobre.html" onclick="alert('Saiba mais sobre o Kiduca e nossa missão!')">Sobre</a>
+        <a href="contatos.html" onclick="alert('Entre em contato conosco para mais informações!')">Contatos</a>
+    </nav>
+
+    <!-- Conteúdo da página -->
+    <div class="content">
+        <h1 style="color: #1f3c58; font-family: 'Comic Sans MS', cursive, sans-serif; text-align: center;">Videos Educativos</h1>
+        <!-- Grelhas de vídeos -->
+        <div class="grid-container">
+            <!-- Primeiro vídeo -->
+            <div class="video-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Z6sHaGenVl0?si=lCNTL7tiOCBasoPX" allowfullscreen></iframe>
+                <p class="video-explanation">Este vídeo é sobre ... (adicionar explicação breve)</p>
+            </div>
+            <!-- Segundo vídeo -->
+            <div class="video-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/_qSwCuQnjqo?si=LHv_xqP6t7MNe5Og" allowfullscreen></iframe>
+                <p class="video-explanation">Este vídeo é sobre ... (adicionar explicação breve)</p>
+            </div>
+            <!-- Terceiro vídeo -->
+            <div class="video-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/MiAvVKAKy0A?si=EeoSsBTDdNckMa5H" allowfullscreen></iframe>
+                <p class="video-explanation">Este vídeo é sobre ... (adicionar explicação breve)</p>
+            </div>
+            <!-- Quarto vídeo -->
+            <div class="video-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Icx7hBWeULM?si=_OKyaMya65pYSAr-" allowfullscreen></iframe>
+                <p class="video-explanation">Este vídeo é sobre ... (adicionar explicação breve)</p>
+            </div>
+        </div>
+    </div>
+
+<br>
+
+
+
+    <div class="footer">
+        <footer>
+            <span>&copy; 2024 - Kiduca | Desenvolvimento web</span>
+        </footer>
+    </div>
+</body>
+</html>

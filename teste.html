@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.png">
+    <title>Kiduca - Kids Educations</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #e6f7ff;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+
+        header {
+            position: relative;
+            background: url('./assets/img/kid.png') no-repeat center center/cover; /* Adiciona a imagem de fundo */
+            color: #ebebeb;
+            text-align: center;
+            padding: 20px 0; /* Adiciona espaço para o conteúdo do header */
+        }
+
+        #logo {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            cursor: pointer;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        #logo:hover {
+            transform: rotate(360deg);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        nav {
+            background: #0077cc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease; /* Adiciona uma transição suave na cor do texto */
+        }
+
+        nav a:hover {
+            color: #ff6f61; /* Muda a cor ao passar o mouse */
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px; /* Adiciona espaço interno */
+        }
+
+        .content img {
+            width: 200px;
+            height: auto;
+            margin: 10px;
+            border-radius: 10px; /* Adiciona borda arredondada */
+            cursor: pointer;
+            transition: transform 0.3s ease; /* Adiciona uma transição suave no efeito de escala */
+        }
+
+        .content img:hover {
+            transform: scale(1.1); /* Aumenta a escala ao passar o mouse */
+        }
+
+        .footer {
+            background: #ffffff;
+            color: #32A8E0;
+            padding: 10px 0;
+            text-align: center;
+            font-weight: 100;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img id="logo" src="assets/img/logo.png" alt="Kiduca Logo" onclick="alert('Clicou no logotipo!')">
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="jogos.html" onclick="alert('Descubra jogos divertidos para crianças!')">Jogos</a>
+    <a href="videos_musicas.html" onclick="alert('Assista a vídeos educativos para crianças!')">Vídeos/Músicas</a>
+    <a href="sobre.html" onclick="alert('Saiba mais sobre o Kiduca e nossa missão!')">Sobre</a>
+    <a href="contatos.html" onclick="alert('Entre em contato conosco para mais informações!')">Contatos</a>
+</nav>
+
+<div class="content">
+    <!-- Adicione imagens aqui -->
+    <img src="assets/img/imagem1.jpg" alt="Imagem 1">
+    <img src="assets/img/imagem2.jpg" alt="Imagem 2">
+    <img src="assets/img/imagem3.jpg" alt="Imagem 3">
+    <!-- Fim das imagens -->
+</div>
+
+<div class="gallery">
+    <img src="assets/img/1.png" onclick="openModal('./assets/img/1.png')" alt="Imagem 1">
+    <img src="assets/img/2.png" onclick="openModal('./assets/img/2.png')" alt="Imagem 2">
+    <img src="assets/img/3.png" onclick="openModal('./assets/img/3.png')" alt="Imagem 3">
+</div>
+
+<!-- Conteúdo educacional aqui -->
+
+<div class="footer">
+    <div class="linha">
+        <footer>
+            <span>&copy; 2024 - Kiduca | Desenvolvimento web</span>
+        </footer>
+    </div>
+</div>
+
+<script>
+    // Galeria de Imagens
+    function openModal(imagePath) {
+        window.open(imagePath, '_blank');
+    }
+</script>
+
+</body>
+</html>

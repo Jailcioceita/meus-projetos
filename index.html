@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.png">
+        <title>Kiduca - Kids Educations</title>
+    <style>
+
+header {
+    position: fixed;
+    top: 0;
+    position: relative;
+    }
+    #logo {
+      position: absolute;
+      top: -20px;
+      left: -15px;
+      width: 150px;
+      cursor: pointer;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    #logo:hover {
+      transform: rotate(360deg);
+      transition: transform 0.5s ease-in-out;
+    }
+
+            body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh; /* Isso garante que o conteúdo mínimo da viewport seja 100% da altura da tela. */
+                background-color: #e6f7ff;
+                font-family: 'Comic Sans MS', cursive, sans-serif;
+            }
+		
+
+        header {
+            background: #1f3c58;
+            color: #ebebeb;
+            text-align: center;
+        }
+
+        nav {
+            background: #0077cc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+		.content {
+                flex: 1; /* Ocupa o espaço disponível para empurrar o footer para o final da página. */
+        }
+
+        nav a:hover {
+            color: #ff6f61; /* Muda a cor ao passar o mouse */
+        }
+
+        .footer {
+            background: #ffffff;
+            color: #32A8E0;
+            padding: 10px 0;
+            text-align: center;
+            font-weight: 100;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-size: 14px;
+        }
+
+    /* Estilos CSS */
+    /* gallery */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+    .gallery img {
+            width: 200px;
+            height: 200px; /* Define uma altura para manter proporções */
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease; /* Adiciona uma transição suave no efeito de escala */
+        }
+
+    .gallery img:hover {
+            transform: scale(1.1); /* Aumenta a escala ao passar o mouse */
+        }
+
+    img, svg, video {
+    vertical-align: middle;
+    }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <img id="logo" src="assets/img/logo.png" alt="Kiduca Logo" onclick="alert('Clicou no logotipo!')">
+
+</header>
+
+    <!-- Barra de Navegação -->
+    <nav>
+            <a href="#">Home</a>
+            <a href="jogos.html" onclick="alert('Descubra jogos divertidos para crianças!')">Jogos</a>
+            <a href="videos_musicas.html" onclick="alert('Assista a vídeos educativos para crianças!')">Vídeos/Músicas</a>
+            <a href="sobre.html" onclick="alert('Saiba mais sobre o Kiduca e nossa missão!')">Sobre</a>
+            <a href="contatos.html" onclick="alert('Entre em contato conosco para mais informações!')">Contatos</a>
+    </nav>
+
+	<div class="content">
+		<!-- Seu conteúdo aqui -->
+	</div>
+
+    <div class="gallery">
+        <img src="assets/img/1.png" onclick="openModal('./assets/img/1.png')" alt="Imagem 1">
+        <img src="assets/img/2.png" onclick="openModal('./assets/img/2.png')" alt="Imagem 2">
+        <img src="assets/img/3.png" onclick="openModal('./assets/img/3.png')" alt="Imagem 3">
+      </div>
+	
+    <!-- Conteúdo educacional aqui -->
+
+    <div class="footer">
+        <div class="linha">
+            <footer>
+                <span>&copy; 2024 - Kiduca | Desenvolvimento web</span>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // Galeria de Imagens
+        function openModal(imagePath) {
+          window.open(imagePath, '_blank');
+        }
+    
+        // Temporizador de Jogos
+        let timerElement = document.getElementById('timer');
+        let seconds = 0;
+        setInterval(function() {
+          seconds++;
+          timerElement.innerText = `Tempo: ${seconds} segundos`;
+        }, 1000);
+    
+        // Botão de Rolagem Suave
+        const scrollToTopButton = document.getElementById('scrollToTopButton');
+        scrollToTopButton.addEventListener('click', function() {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+
+         // Carrossel de Imagens
+    let currentImageIndex = 0;
+    const images = ['1.png', '2.png', '3.png']; // Substitua com suas imagens
+    const header = document.getElementById('header');
+
+    function changeImage() {
+      header.style.backgroundImage = `url(assets/img/${images[currentImageIndex]})`;
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+    }
+    setInterval(changeImage, 5000); // Muda a imagem a cada 5 segundos
+
+    // Validar Formulário de Contato
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function(event) {
+      const nome = document.getElementById('nome').value;
+      const email = document.getElementById('email').value;
+      const mensagem = document.getElementById('mensagem').value;
+
+      if (!nome || !email || !mensagem) {
+        alert('Por favor, preencha todos os campos do formulário.');
+        event.preventDefault();
+      }
+    });
+
+    // Toggle para o Menu Mobile
+    const toggleMenu = document.getElementById('toggleMenu');
+    const nav = document.querySelector('nav');
+    toggleMenu.addEventListener('click', function() {
+      nav.classList.toggle('show');
+    });
+
+    // Efeito de Parallax
+    window.addEventListener('scroll', function() {
+      const scrollPosition = window.scrollY;
+      header.style.backgroundPositionY = -scrollPosition * 0.5 + 'px';
+    });
+
+      </script>
+
+</body>
+</html>

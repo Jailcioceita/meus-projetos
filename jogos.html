@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.png">
+    <title>Jogos</title>
+    
+    <style>
+        header {
+            position: fixed;
+            top: 0;
+            position: relative;
+        }
+        #logo {
+            position: absolute;
+            top: -20px;
+            left: -15px;
+            width: 150px;
+            cursor: pointer;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        #logo:hover {
+            transform: rotate(360deg);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Isso garante que o conteúdo mínimo da viewport seja 100% da altura da tela. */
+            background-color: #e6f7ff;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+
+
+        header {
+            background: #1f3c58;
+            color: #ebebeb;
+            text-align: center;
+        }
+
+        nav {
+            background: #0077cc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 50vh; /* Isso garante que o conteúdo mínimo da viewport seja 100% da altura da tela. */
+            background-color: #e6f7ff;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }        
+
+        .content h2 {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: #1f3c58;
+            margin: 20px 0;
+        }
+
+        nav a:hover {
+            color: #ff6f61; /* Muda a cor ao passar o mouse */
+        }
+        
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: #ffffff;
+            color: #32A8E0;
+            padding: 10px 0;
+            text-align: center;
+            font-weight: 100;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-size: 14px;
+        }
+
+        /* Adicione este CSS para estilizar a grelha de jogos */
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px; /* Ajuste o espaçamento entre as grelhas */
+            justify-items: center;
+            margin-top: 30px; /* Ajuste a margem entre o título e a grelha */
+        }
+
+        .games-grid a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            transition: transform 0.3s ease-in-out;
+            border: 2px solid #0077cc;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .games-grid a img {
+            max-width: 70%; /* Define a largura máxima para a imagem */
+            height: auto; /* Deixa a altura automática para manter a proporção */
+            margin-bottom: 10px; /* Adiciona um espaço abaixo da imagem */
+        }
+
+        .games-grid a:hover {
+            transform: scale(1.1);
+        }
+
+        .game-name {
+            font-weight: bold;
+            color: #1f3c58;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img id="logo" src="assets/img/logo.png" alt="Kiduca Logo" onclick="alert('Clicou no logotipo!')">
+    </header>
+    
+    <!-- Barra de Navegação -->
+    <nav>
+        <a href="index.html" onclick="alert('Bem-vindo à página inicial!')">Home</a>
+        <a href="#" onclick="alert('Descubra jogos divertidos para crianças!')">Jogos</a>
+        <a href="videos_musicas.html" onclick="alert('Assista a vídeos educativos para crianças!')">Vídeos/Músicas</a>
+        <a href="sobre.html" onclick="alert('Saiba mais sobre o Kiduca e nossa missão!')">Sobre</a>
+        <a href="contatos.html" onclick="alert('Entre em contato conosco para mais informações!')">Contatos</a>
+    </nav>
+    
+    <div class="content">
+        <h2 style="font-family: 'Comic Sans MS', cursive, sans-serif; color: #1f3c58;">Jogos Educativos e Divertidos</h2>
+        <div class="games-grid">
+            <a href="../jogos/jogodaforca/index.html" onclick="alert('Iniciar Jogo da Forca')">
+                <img src="../jogos/jogodaforca/forca.png" alt="Jogo da Forca">
+                <div class="game-name">Jogo da Forca</div>
+            </a>
+            <a href="../jogos/jogodavelha/index.html" onclick="alert('Iniciar Jogo da Velha')">
+                <img src="../jogos/jogodavelha/velha.webp" alt="Jogo da Velha">
+                <div class="game-name">Jogo da Velha</div>
+            </a>
+            <!-- Adicione mais jogos aqui -->
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="linha">
+            <footer>
+                <span>&copy; 2024 - Kiduca | Desenvolvimento web</span>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

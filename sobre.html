@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.png">
+        <title>Sobre</title>
+        
+        <style>
+            header {
+    position: fixed;
+    top: 0;
+    position: relative;
+    }
+    #logo {
+      position: absolute;
+      top: -20px;
+      left: -15px;
+      width: 150px;
+      cursor: pointer;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    #logo:hover {
+      transform: rotate(360deg);
+      transition: transform 0.5s ease-in-out;
+    }
+
+            body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh; /* Isso garante que o conteúdo mínimo da viewport seja 100% da altura da tela. */
+                background-color: #e6f7ff;
+                font-family: 'Comic Sans MS', cursive, sans-serif;
+            }
+
+            p {
+                display: block;
+                margin-block-start: 1em;
+                margin-block-end: 1em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+            }
+		
+
+        header {
+            background: #1f3c58;
+            color: #ebebeb;
+            text-align: center;
+        }
+
+        nav {
+            background: #0077cc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+            body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh; /* Isso garante que o conteúdo mínimo da viewport seja 100% da altura da tela. */
+                background-color: #e6f7ff;
+                font-family: 'Comic Sans MS', cursive, sans-serif;
+            }
+    
+            .content {
+                flex: 1; /* Ocupa o espaço disponível para empurrar o footer para o final da página. */
+                align-items: center;
+                position: relative;
+                padding: 20px 70px;
+            }
+
+            nav a:hover {
+            color: #ff6f61; /* Muda a cor ao passar o mouse */
+        }
+    
+            .footer {
+                background: #ffffff;
+                color: #32A8E0;
+                padding: 10px 0;
+                text-align: center;
+                font-weight: 100;
+                font-family: 'Comic Sans MS', cursive, sans-serif;
+                font-size: 14px;
+            }
+            h3{
+                color: #1f3c58;
+            }
+            img, svg, video {
+              vertical-align: middle;
+            }
+
+            .divMain img {
+              width: 40px;
+            }
+
+            .divKid img{
+                width: 60px; 
+            }
+
+            div {
+                display: block;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <img id="logo" src="assets/img/logo.png" alt="Kiduca Logo" onclick="alert('Clicou no logotipo!')">
+        </header>
+        
+            <!-- Barra de Navegação -->
+            <nav>
+                    <a href="index.html" onclick="alert('Bem-vindo à página inicial!')">Home</a>
+                    <a href="jogos.html" onclick="alert('Descubra jogos divertidos para crianças!')">Jogos</a>
+                    <a href="videos_musicas.html" onclick="alert('Assista a vídeos educativos para crianças!')">Vídeos/Músicas</a>
+                    <a href="sobre.html" onclick="alert('Saiba mais sobre o Kiduca e nossa missão!')">Sobre</a>
+                    <a href="contatos.html" onclick="alert('Entre em contato conosco para mais informações!')">Contatos</a>
+            </nav>
+        
+        <div class="content">
+            <main>
+                <section>
+                    <div class="divKid">
+                    <h3> O que é a Pordata Kids? </h3>
+                    <p> Kiduca é um site que contém jogos educativos online gratuitos para crianças, desde os 6 aos 10 anos, eventualmente acessível às outras faixas etárias. Os jogos interativos e pedagógicos de Kiduca são atividades de alfabetização interativas de diferentes tipos: jogos em português, inglês, jogos de matemática, memória, jogos de tabuleiro, e até vídeos educativos.</p>
+                    <p><img src="./assets/img/kid.png">Estes jogos didáticos e vídeos educativos podem ser usados em sala de aula e em casa para introduzir, reforçar ou motivar o processo de aprendizagem.</img></p>
+                    </div>
+                </section>
+
+                <section>
+                    <h3> Por que é que este site pode ser útil para os Alunos? </h3>
+                    <div class ="divMain">
+                          <p><img src="./assets/certo/certo_verde.svg" >&nbsp;&nbsp;Tem uma linguagem simples, com um visual adequado ao público infantil. </p>
+                          <p><img src="./assets/certo/certo_azul.svg" >&nbsp;&nbsp;Está preparado para telemóveis, tablets e, claro, computadores! </p>
+                          <p><img src="./assets/certo/certo_laranja.svg" >&nbsp;&nbsp;Todos os dados apresentados são simples, mas credíveis, provenientes de fontes oficiais. </p>
+                          <p><img src="./assets/certo/certo_roxo.svg" >&nbsp;&nbsp;As crianças encontram na Kiduca a resposta a inúmeras perguntas através de animações, jogos, vídeos e músicas educativas. </p>
+                          <p><img src="./assets/certo/certo_amarelo.svg" >&nbsp;&nbsp;É uma excelente ferramenta educacional com informação de vários assuntos da atualidade e de aprendizagem.</p>                      
+                    </div>
+                </section>
+            </main>        
+        </div>
+        
+        <div class="footer">
+            <div class="linha">
+                <footer>
+                    <span>&copy; 2024 - Kiduca | Desenvolvimento web</span>
+                </footer>
+            </div>
+        </div>
+    </body>
+    </html>

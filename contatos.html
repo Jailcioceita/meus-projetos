@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.png">
+    <title>Contatos</title>
+    
+    <style>
+        header {
+    position: fixed;
+    top: 0;
+    position: relative;
+    }
+    #logo {
+      position: absolute;
+      top: -20px;
+      left: -15px;
+      width: 150px;
+      cursor: pointer;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    #logo:hover {
+      transform: rotate(360deg);
+      transition: transform 0.5s ease-in-out;
+    }
+
+            body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh; /* Isso garante que o conteúdo mínimo da viewport seja 100% da altura da tela. */
+                background-color: aquamarine;
+                font-family: 'Comic Sans MS', cursive, sans-serif;
+            }
+		
+
+        header {
+            background: #1f3c58;
+            color: #ebebeb;
+            text-align: center;
+        }
+
+        nav {
+            background: #0077cc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #e6f7ff; /* Azul claro para uma aparência mais suave */
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Fonte mais amigável */
+            text-decoration: none;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        nav a:hover {
+            color: #ff6f61; /* Muda a cor ao passar o mouse */
+        }
+
+        .footer {
+            background: #ffffff; /* Cor de fundo do rodapé */
+            color: #32A8E0; /* Cor do texto do rodapé */
+            padding: 10px 0;
+            text-align: center;
+            font-weight: 100;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-size: 14px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #32A8E0; /* Cor do título da seção */
+            font-size: 24px; /* Tamanho do título da seção */
+        }
+
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        .contact-info h3 {
+            color: #32A8E0; /* Cor dos títulos de contato */
+            font-size: 18px;
+            margin-bottom: 10px; /* Espaçamento inferior para separar os títulos */
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        .contact-info img {
+            width: 50px; /* Tamanho dos ícones de contato */
+            height: 50px;
+            margin-bottom: 10px; /* Espaçamento inferior para separar os ícones */
+        }
+
+        iframe {
+            border: none;
+        }
+
+        img, svg, video {
+    vertical-align: middle;
+        }
+
+        .col-md-4 a{
+    color: #3f4649;
+    cursor: pointer;
+    text-decoration: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <img id="logo" src="assets/img/logo.png" alt="Kiduca Logo" onclick="alert('Clicou no logotipo!')">
+    </header>
+    
+        <!-- Barra de Navegação -->
+        <nav>
+                <a href="index.html" onclick="alert('Bem-vindo à página inicial!')">Home</a>
+                <a href="jogos.html" onclick="alert('Descubra jogos divertidos para crianças!')">Jogos</a>
+                <a href="videos_musicas.html" onclick="alert('Assista a vídeos educativos para crianças!')">Vídeos/Músicas</a>
+                <a href="sobre.html" onclick="alert('Saiba mais sobre o Kiduca e nossa missão!')">Sobre</a>
+                <a href="#" onclick="alert('Entre em contato conosco para mais informações!')">Contatos</a>
+        </nav>
+    
+    <div class="content">
+        <section id="contactos">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>Contatos</h2>
+                    <p>Fala Connosco!</p>
+                </div>
+                <div style="text-align: center;">
+                    <p>Se queres saber mais sobre nós, tens alguma questão, informação ou sugestão a fazer-nos, <strong>contacta-nos!</strong></p><br>
+                    <div class="course-item">
+                        <div class="course-content">
+                            <div class="row contact-info">
+                    
+                                <div class="col-md-4">
+                                    <div class="contact-address">
+                                        <img src="./assets/icon/loca.png" alt="Localização">
+                                        <h3>Morada | EPRIN</h3>
+                                        <p>Avenida Mouzinho de Albuquerque</p>
+                                        <p>6060-181 Idanha-a-Nova</p>
+                                        <p>GPS 39.923132, -7.24024056</p>
+                                    </div>
+                                </div>
+                    
+                                <div class="col-md-4">
+                                    <div class="contact-phone">
+                                        <img src="./assets/icon/cell.png" alt="Telefone">
+                                        <h3>Telefone</h3>
+                                        <p><a href="tel:+351924961194">(351) 924 961 194</a></p>
+                                        <p><a href="tel:+351924961194">(Chamada para rede fixa nacional)</a></p>
+                                    </div>
+                                </div>
+                    
+                                <div class="col-md-4">
+                                    <div class="contact-email">
+                                        <img src="./assets/icon/mail.png" alt="Email">
+                                        <h3>Email</h3>
+                                        <p><a href="mailto:00362021@eprin.net">00362021@eprin.net</a></p>
+                                        <p><a href="mailto:jdeceita23@gmail.com">jdeceita23@gmail.com</a></p>
+                                    </div>
+                                </div>
+                    
+                            </div>
+                        </div>
+                    
+                        <div class="container mb-4">		
+                            <iframe src="https://maps.google.com/maps?q=EPRIN&t=&z=17&ie=UTF8&iwloc=&output=embed" width="100%" height="380" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <div class="footer">
+        <div class="linha">
+            <footer>
+                <span>&copy; 2024 - Kiduca | Desenvolvimento Web</span>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
